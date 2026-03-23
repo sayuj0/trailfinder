@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/trailListFragment"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="@string/menu_trails" />
+
+    <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="@string/menu_favorites" />
+
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/menu_about" />
+
+</menu>
