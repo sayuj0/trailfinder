@@ -25,6 +25,12 @@
     <fragment
         android:id="@+id/trailDetailFragment"
         android:name="edu.msudenver.cs3013.trailfinder.TrailDetailFragment"
-        android:label="Trail Detail" />
+        android:label="Trail Detail">
+
+        <argument
+            android:name="trailId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
 
 </navigation>
