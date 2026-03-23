@@ -16,9 +16,9 @@ class TrailListFragment : Fragment(R.layout.fragment_trail_list) {
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = TrailAdapter { trail ->
-            findNavController().navigate(
-                R.id.action_trailListFragment_to_trailDetailFragment
-            )
+            val action =
+                TrailListFragmentDirections.actionTrailListFragmentToTrailDetailFragment(trail.id)
+            findNavController().navigate(action)
         }
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.trailRecyclerView)
