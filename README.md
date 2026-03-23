@@ -1,10 +1,10 @@
 # TrailFinder
 
 <p align="center">
-  <img src="images/1.png" width="180">
-  <img src="images/2.png" width="180">
-  <img src="images/3.png" width="180">
-  <img src="images/4.png" width="180">
+  <img src="images/1.png" width="160" height="320">
+  <img src="images/2.png" width="160" height="320">
+  <img src="images/3.png" width="160" height="320">
+  <img src="images/4.png" width="160" height="320">
 </p>
 
 ## What the app does
