@@ -33,4 +33,14 @@
             android:defaultValue="-1" />
     </fragment>
 
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="edu.msudenver.cs3013.trailfinder.FavoritesFragment"
+        android:label="Favorites" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="edu.msudenver.cs3013.trailfinder.AboutFragment"
+        android:label="About" />
+
 </navigation>
