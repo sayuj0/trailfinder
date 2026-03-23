@@ -1,12 +1,12 @@
 package edu.msudenver.cs3013.trailfinder
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class TrailListFragment : Fragment(R.layout.fragment_trail_list) {
 
@@ -15,20 +15,18 @@ class TrailListFragment : Fragment(R.layout.fragment_trail_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val buttonIds = listOf(R.id.trail1, R.id.trail2, R.id.trail3, R.id.trail4)
+        val adapter = TrailAdapter { trail ->
+            findNavController().navigate(
+                R.id.action_trailListFragment_to_trailDetailFragment
+            )
+        }
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.trailRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = adapter
 
         viewModel.trails.observe(viewLifecycleOwner) { trails ->
-            buttonIds.forEachIndexed { index, buttonId ->
-                val trail = trails[index]
-                val button = view.findViewById<Button>(buttonId)
-                button.text = trail.name
-                button.setOnClickListener {
-                    findNavController().navigate(
-                        R.id.action_trailListFragment_to_trailDetailFragment
-                    )
-                }
-                Log.d("TrailFinder", "Trail loaded: ${trail.name}")
-            }
+            adapter.submitList(trails)
         }
     }
 }
