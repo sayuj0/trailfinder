@@ -1,15 +1,11 @@
 # TrailFinder
 
-<table>
-  <tr>
-    <td><img src="images/1.png" width="250"></td>
-    <td><img src="images/2.png" width="250"></td>
-  </tr>
-  <tr>
-    <td><img src="images/3.png" width="250"></td>
-    <td><img src="images/4.png" width="250"></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="images/1.png" width="180">
+  <img src="images/2.png" width="180">
+  <img src="images/3.png" width="180">
+  <img src="images/4.png" width="180">
+</p>
 
 ## What the app does
 TrailFinder is an Android app for viewing hiking trails. Users can open the trail list, scroll through available trails, and tap one to see its details. The app also includes a navigation drawer that lets users move between Home, Explore Trails, Favorites, and About.
